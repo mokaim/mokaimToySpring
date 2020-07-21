@@ -37,4 +37,10 @@ public class HomeController {
 		return "home";
 	}
 	
+	
+	@RequestMapping(value="/comment", method = RequestMethod.GET)
+	public String home() {
+		return "comments";
+	}
+	
 }

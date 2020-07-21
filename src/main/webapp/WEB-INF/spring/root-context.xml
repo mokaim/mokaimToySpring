@@ -26,10 +26,16 @@
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
+		<property name="mapperLocations" value="classpath:/mapper/**/*.xml" />
+		<!-- 이거 설정해줘야 한다 ㅋㅋㅋㅋ 반드시 클래스 패스 설정해주셈 -->
+
 	</bean>
 	
 	
+	
+	
 	<mybatis-spring:scan base-package="io.github.mokaim.mapper"/>
+	
 	<context:component-scan base-package="io.github.mokaim"></context:component-scan>
 	
 </beans>

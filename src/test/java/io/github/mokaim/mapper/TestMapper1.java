@@ -1,8 +1,5 @@
 package io.github.mokaim.mapper;
 
-import static org.junit.Assert.*;
-
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +16,14 @@ import lombok.extern.log4j.Log4j;
 public class TestMapper1 {
 
 	
-	@Setter(onMethod_ = {@Autowired})
+	//@Setter(onMethod_ = {@Autowired})
+	
+	@Autowired
 	private TestMapper testMapper;
 	
 	@Test
 	public void test() {
-		log.info("test query result : " + testMapper.getTest());
+		log.info("test query result : " + testMapper.getname());
 	}
 
 }
