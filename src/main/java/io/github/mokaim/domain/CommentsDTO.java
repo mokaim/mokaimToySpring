@@ -7,7 +7,9 @@ import lombok.Setter;
 @Setter
 public class CommentsDTO {
 	
-	
-	private String story;
+	private int comments_id;
+	private String usr_id;
+	private String comments_content;
+	private String reg_date;
 	
 }

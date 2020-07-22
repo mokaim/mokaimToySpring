@@ -9,8 +9,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     	SELECT name FROM test
     </select>
     
-    <insert id="setComments" parameterType="">
-    	
+    <insert id="setComments" parameterType="io.github.mokaim.domain.CommentsDTO">
+    	insert into comments (usr_id,comments_content,reg_date) values(#{usr_id},#{comments_content},#{reg_date});
     </insert>
+    
+    <select id="getComments" resultType="io.github.mokaim.domain.CommentsDTO">
+    	SELECT * FROM comments
+    </select>
 
 </mapper>

@@ -23,7 +23,7 @@ public class TestMapper1 {
 	
 	@Test
 	public void test() {
-		log.info("test query result : " + testMapper.getname());
+		log.info("test query result : " );
 	}
 
 }
